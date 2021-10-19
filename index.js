@@ -1,3 +1,8 @@
+const path = require('path')
+const fs = require('fs')
+const argsParser = require('./args-parser')
+
+// 判断Electron是否处于开发环境
 function isElectionDevMode() {
   const electron = require('electron');
 
@@ -8,10 +13,9 @@ function isElectionDevMode() {
 
   return isEnvSet ? getFromEnv : !app.isPackaged;
 }
+
 const isDev = isElectionDevMode()
-const path = require('path')
-const fs = require('fs')
-const argsParser = require('./args-parser')
+
 
 // 获得正确的参数
 const getArgParams = (argv = process.argv) => {
@@ -22,6 +26,7 @@ const getArgParams = (argv = process.argv) => {
   }
 }
 
+// 获取asar的正确路径
 function getCorrectPath(basePath, relativePath) {
   let ret
   if (isDev) {
