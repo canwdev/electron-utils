@@ -1,0 +1,10 @@
+{
+  "name": "@canwdev/electron-utils",
+  "version": "0.1.0",
+  "description": "My election utils",
+  "main": "index.js",
+  "repository": "https://github.com/canwdev/electron-utils.git",
+  "author": "canwdev <c2097@live.com>",
+  "license": "MIT",
+  "private": false
+}
